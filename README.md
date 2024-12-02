@@ -1,7 +1,7 @@
 # Garbage-classification
-MOTIVOS PARA ELEGIR EL PROYECTO:
-¿Qué relevancia tiene este tema para ustedes?  ``` Queríamos crear una herramienta útil para nuestro día```
-¿Cómo puede generar utilidad en un caso real?
+- MOTIVOS PARA ELEGIR EL PROYECTO:
+- ¿Qué relevancia tiene este tema para ustedes?  ``` Queríamos crear una herramienta útil para nuestro día```
+- ¿Cómo puede generar utilidad en un caso real?
 
 REFLEXIÓN SOBRE EL DATASET:
 ¿El dataset es balanceado?
