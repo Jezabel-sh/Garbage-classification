@@ -40,7 +40,8 @@ Día 1
     Seleccionamos EfficientBO, un modelo especializado en clasificar objetos, que reentrenamos para nuestro caso.
 
     ¿Qué dataset seleccionaron y por qué?
-    Elegimos un dataset que contiene categorías de materiales para dividirlos según el reciclaje. Incluye imágenes con etiquetas, facilitando el entrenamiento.
+    Elegimos un dataset que contiene categorías de materiales para dividirlos según el reciclaje. Incluye imágenes con etiquetas, facilitando el 
+    entrenamiento.
 
 Día 2
 🔍 Nuestro Modelo:
@@ -56,7 +57,8 @@ Día 2
         Prueba 1: Últimas 80 capas sin congelar, 30 epochs. Métricas inestables por exceso de parámetros.
         Prueba 2: Últimas 120 capas sin congelar, 50 epochs. Menos inestabilidad, pero hay overfitting.
         Prueba 3: Últimas 20 capas sin congelar, 50 epochs. Peor estabilidad en las métricas.
-        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían               inestables.
+        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían               
+        inestables.
         Prueba 5: Congelamos las primeras y últimas 100 capas, 50 epochs, añadimos early stopping. ¡El modelo funcionó correctamente!
 
      🔎 Análisis de Resultados:
@@ -66,7 +68,8 @@ Día 3
 🚀 Mejoras en el Modelo:
 
      👀 Conclusión:
-        El principal desafío era el dataset. La mayoría de las imágenes contenían un único objeto (residuo) sobre un fondo blanco, limitando la              diversidad visual y la capacidad de generalización.
+        El principal desafío era el dataset. La mayoría de las imágenes contenían un único objeto (residuo) sobre un fondo blanco, limitando la              
+        diversidad visual y la capacidad de generalización.
 
      ❓ Problemas Detectados:
         Color Marrón: Asociado erróneamente al cartón.
@@ -75,4 +78,5 @@ Día 3
         Residuos Orgánicos: Categoría desbalanceada, incluso con data augmentation, era la peor clasificada.
 
       💡 Plan de Mejora:
-         Evaluamos otros datasets de residuos, pero eran similares al nuestro. Decidimos descargar imágenes de internet, etiquetarlas y entrenar con          este dataset mejorado.
+         Evaluamos otros datasets de residuos, pero eran similares al nuestro. Decidimos descargar imágenes de internet, etiquetarlas y entrenar 
+         con este dataset mejorado.
