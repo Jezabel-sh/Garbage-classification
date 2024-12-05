@@ -50,7 +50,7 @@ Día 2
         Ajustamos las imágenes a 224x224.
         Nuestro modelo tiene 238 capas. Añadimos una capa de salida para clasificar entre 6 categorías.
 
-    Resultados del Entrenamiento:
+   📈 Resultados del Entrenamiento:
         Prueba 1: Últimas 80 capas sin congelar, 30 epochs. Métricas inestables por exceso de parámetros.
         Prueba 2: Últimas 120 capas sin congelar, 50 epochs. Menos inestabilidad, pero hay overfitting.
         Prueba 3: Últimas 20 capas sin congelar, 50 epochs. Peor estabilidad en las métricas.
