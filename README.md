@@ -1,48 +1,76 @@
-# Garbage-classification
-- Día 1
-  
-# MOTIVOS PARA ELEGIR EL PROYECTO:
-- ¿Qué relevancia tiene este tema para ustedes?  ``` Queríamos crear una herramienta útil para nuestro día a día, que nos permitiera identificar los materiales que componen los productos. Nuestro proyecto tiene varias fases: 1º Crear el modelo que pueda clasificar correctamente los materiales. 2º Implementar el modelo en una app, que permita al usuario sacar una foto y que el modelo clasifique automáticamente el material.```
-- ¿Cómo puede generar utilidad en un caso real? ```Nuestro principal objetivo es identificar los objetos para reciclar en cada contenedor.```
-- 
-# REFLEXIÓN SOBRE EL DATASET:
-- ¿El dataset es balanceado? ```No, falta equilibrar el número de imágenes de todos los tipos de clasificación```
-- ¿Deberemos hacer mucha limpieza?```No, ya que solo tenemos que reestructurar el tamaño de las imágenes y el número de ellas.```
-- ¿Es algun problema el formato de alguna variable?```El tamaño.```
-- ¿Tiene suficientes registros para entrenar al modelo?```Si, he incluso pondremos más ya que tenemos que equilibrar las categorías.```
+🗑️ Garbage Classification
+Día 1
+📌 Motivos para elegir el proyecto:
 
-# ELECCIÓN DEL MODELO:
-- ¿Qué tipo de problema estás resolviendo? ```Clasificación de imágenes.```
-- ¿El modelo está entrenado para un dominio similar? ```Si, clasifica muchas cosas pero no se especializa en ninguna.```
-- ¿Qué modelo han elegido y por qué? ```EfficientBO que está especializado en clasificar objetos y lo reentrenaremos para nuestro caso.```
-- ¿Qué dataset han seleccionado y cuál es la razón detrás de esta elección? ```Hemos elegido este dataset, ya que contiene diferentes categorias de materiales para saber como dividirlas a la hora del reciclaje, este dataset presenta imágenes con sus respectivas etiquetas lo que facilita el entrenamiento.```
+    ¿Qué relevancia tiene este tema para ustedes?
+    Queríamos crear una herramienta útil para nuestro día a día, que nos permitiera identificar los materiales que componen los productos.
 
-- Día 2
+    Fases del proyecto:
+    1️⃣ Crear un modelo que clasifique correctamente los materiales.
+    2️⃣ Implementar el modelo en una aplicación que permita al usuario tomar una foto y clasificar automáticamente el material.
 
-# NUESTRO MODELO:
-- Pruebas Iniciales con el modelo ```Realizamos una prueba inicial con el modelo sin entrenar, pero los resultados no eran buenos```
-- Análisis, construcción, compilación y preprocesamiento de los datos: ```Preparamos los datos (se ajustan las imágenes a 224 x 224). Nuestro modelo tenía 238 capas, creamos una nueva (output), ya que nuestro objetivo era que el modelo a la hora de hacer la predicción, eligiera una categoría de las 6 que teníamos.```
-- Entrenamiento del modelo ```Tras experimentar con diferentes configuraciones para el entrenamiento del modelo, se obtuvieron los siguientes resultados:```
- - ```Prueba 1: Capas sin congelar (últimas: 80), epochs (30): Las métricas de accuracy y loss presentan oscilaciones significativas durante el entrenamiento, el modelo tenía demasiados parámetros para ajustar, lo que hacía difícil que el entrenamiento fuera estable.```
- - ```Prueba 2: Capas sin congelar (últimas: 120), epochs (50): Las métricas siguen teniendo algunas oscilaciones, pero hay overfitting.```
- - ```Prueba 3: Capas sin congelar (últimas: 20), epochs (50): Las métricas empeoran, el modelo no es estable```
- - ```Prueba 4: Capas congeladas (primeras y últimas 50), epochs (50), añadimos callback: Mejora bastante el entrenamiento pero todavía observamos demasiadas oscilaciones en las métricas.```
- - ```Prueba 5: Capas congeladas (primeras y últimas 100), epochs (50), añadimos earlystopping: El modelo funciona correctamente```
-- Análisis de resultados: ```Nuestro modelo es muy bueno con las imágenes de prueba del dataset, pero no tanto con las imágenes del mundo real (google)```
+    ¿Cómo puede generar utilidad en un caso real?
+    Nuestro principal objetivo es identificar los objetos para reciclar en el contenedor correspondiente.
 
+🗂️ Reflexión sobre el Dataset:
 
-- Día 3
+    ¿El dataset es balanceado?
+    ❌ No, falta equilibrar el número de imágenes de todas las categorías.
 
-# MEJORAS DE NUESTRO MODELO:
-- Conclusiones: ```Concluimos que el principal desafío radicaba en el dataset, ya que la mayoría de las imágenes consistían en un único objeto (residuo) sobre un fondo blanco. Esto limitaba la diversidad visual y podría haber reducido la capacidad del modelo para generalizar en escenarios más complejos.```
-- Problemas del modelo: ```Los principales problemas de nuestro modelo eran```:
-- ```Color marrón: nuestro modelo había asociado el color marrón al cartón```
-- ```Tapones: si el tapón no era azul o blanco y estaba adherido a la botella, nuestro modelo lo clasificaba erróneamente como metal```
-- ```Imágenes personas y animales: el modelo los identificaba como papel, ya que seguramente durante el entrenamiento tuvo imágenes de revistas y periódicos etiquetadas como papel```
-- ```Residuos orgánicos: En esta categoría apenas teníamos imágenes comparado con las otras e hicimos un data augmentation, por lo que era la categoría que peor se le daba al modelo a la hora de clasificar```
-- Plan de mejora: ```Para mejorar las imágenes de nuestro dataset, estuvimos evaluando otros dataset de residuos, pero las imágenes eran muy parecidas a las nuestras y no nos servían, decidimos descargarlas de internet y etiquetarlas y empezar nuestro entrenamiento con el dataset mejorado```
+    ¿Deberemos hacer mucha limpieza?
+    ✅ No, solo es necesario reestructurar el tamaño y equilibrar las imágenes.
 
-   
+    ¿Es algún problema el formato de alguna variable?
+    📏 Sí, el tamaño de las imágenes.
 
-  
+    ¿Tiene suficientes registros para entrenar el modelo?
+    ✅ Sí, aunque agregaremos más imágenes para equilibrar las categorías.
 
+🛠️ Elección del Modelo:
+
+    ¿Qué tipo de problema están resolviendo?
+    Clasificación de imágenes.
+
+    ¿El modelo está entrenado para un dominio similar?
+    ✅ Sí, clasifica muchos objetos, aunque no se especializa en ninguno.
+
+    ¿Qué modelo han elegido y por qué?
+    Seleccionamos EfficientBO, un modelo especializado en clasificar objetos, que reentrenamos para nuestro caso.
+
+    ¿Qué dataset seleccionaron y por qué?
+    Elegimos un dataset que contiene categorías de materiales para dividirlos según el reciclaje. Incluye imágenes con etiquetas, facilitando el entrenamiento.
+
+Día 2
+🔍 Nuestro Modelo:
+
+    Pruebas Iniciales:
+    Hicimos pruebas con el modelo sin entrenar, pero los resultados no fueron satisfactorios.
+
+    Procesamiento de Datos:
+        Ajustamos las imágenes a 224x224.
+        Nuestro modelo tiene 238 capas. Añadimos una capa de salida para clasificar entre 6 categorías.
+
+    Resultados del Entrenamiento:
+        Prueba 1: Últimas 80 capas sin congelar, 30 epochs. Métricas inestables por exceso de parámetros.
+        Prueba 2: Últimas 120 capas sin congelar, 50 epochs. Menos inestabilidad, pero hay overfitting.
+        Prueba 3: Últimas 20 capas sin congelar, 50 epochs. Peor estabilidad en las métricas.
+        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían inestables.
+        Prueba 5: Congelamos las primeras y últimas 100 capas, 50 epochs, añadimos early stopping. ¡El modelo funcionó correctamente!
+
+    Análisis de Resultados:
+    El modelo tiene buen rendimiento con las imágenes del dataset, pero no generaliza bien con imágenes externas (por ejemplo, de Google).
+
+Día 3
+🚀 Mejoras en el Modelo:
+
+    Conclusión:
+    El principal desafío era el dataset. La mayoría de las imágenes contenían un único objeto (residuo) sobre un fondo blanco, limitando la diversidad visual y la capacidad de generalización.
+
+    Problemas Detectados:
+        Color Marrón: Asociado erróneamente al cartón.
+        Tapones: Si el tapón no era azul/blanco y estaba adherido a la botella, se clasificaba como metal.
+        Personas y Animales: Clasificados como papel, posiblemente por imágenes de revistas/periódicos durante el entrenamiento.
+        Residuos Orgánicos: Categoría desbalanceada, incluso con data augmentation, era la peor clasificada.
+
+    Plan de Mejora:
+    Evaluamos otros datasets de residuos, pero eran similares al nuestro. Decidimos descargar imágenes de internet, etiquetarlas y entrenar con este dataset mejorado.
