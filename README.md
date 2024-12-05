@@ -23,10 +23,10 @@
 - Configuración del entorno
 - Pruebas Iniciales con el modelo ```Realizamos una prueba inicial con el modelo sin entrenar, pero los resultados no eran buenos```
 - Análisis y congelación de capas ```Nuestro modelo tenía 238 capas, creamos una nueva (output), ya que nuestro objetivo era que el modelo a la hora de hacer la predicción, eligiera una categoría de las 6 que teníamos. Tras experimentar con diferentes configuraciones para el entrenamiento del modelo, se obtuvieron los siguientes resultados:```
-  ```Prueba 1: Capas sin congelar (últimas: 80), epochs (30): Las métricas de accuracy y loss presentan oscilaciones significativas durante el entrenamiento, el modelo tenía demasiados parámetros para ajustar, lo que hacía difícil que el entrenamiento fuera estable.```
-  ```Prueba 2: Capas sin congelar (últimas: 120), epochs (50): Las métricas siguen teniendo algunas oscilaciones, pero hay overfitting.```
-  ```Prueba 3: Capas sin congelar (últimas: 20), epochs (50): Las métricas empeoran, el modelo no es estable```
-  ```Prueba 4: Capas congeladas (primeras y últimas 50), epochs (50), añadimos callback: Mejora bastante el entrenamiento pero todavía observamos demasiadas oscilaciones en las métricas.```
-  ```Prueba 5: Capas congeladas (primeras y últimas 100), e
+ - ```Prueba 1: Capas sin congelar (últimas: 80), epochs (30): Las métricas de accuracy y loss presentan oscilaciones significativas durante el entrenamiento, el modelo tenía demasiados parámetros para ajustar, lo que hacía difícil que el entrenamiento fuera estable.```
+ - ```Prueba 2: Capas sin congelar (últimas: 120), epochs (50): Las métricas siguen teniendo algunas oscilaciones, pero hay overfitting.```
+ - ```Prueba 3: Capas sin congelar (últimas: 20), epochs (50): Las métricas empeoran, el modelo no es estable```
+ - ```Prueba 4: Capas congeladas (primeras y últimas 50), epochs (50), añadimos callback: Mejora bastante el entrenamiento pero todavía observamos demasiadas oscilaciones en las métricas.```
+ - ```Prueba 5: Capas congeladas (primeras y últimas 100), e
   
 
