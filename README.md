@@ -63,14 +63,14 @@ Día 2
 Día 3
 🚀 Mejoras en el Modelo:
 
-    Conclusión:
-    El principal desafío era el dataset. La mayoría de las imágenes contenían un único objeto (residuo) sobre un fondo blanco, limitando la diversidad visual y la capacidad de generalización.
+     👀 Conclusión:
+     El principal desafío era el dataset. La mayoría de las imágenes contenían un único objeto (residuo) sobre un fondo blanco, limitando la              diversidad visual y la capacidad de generalización.
 
-    Problemas Detectados:
+     ❓ Problemas Detectados:
         Color Marrón: Asociado erróneamente al cartón.
         Tapones: Si el tapón no era azul/blanco y estaba adherido a la botella, se clasificaba como metal.
         Personas y Animales: Clasificados como papel, posiblemente por imágenes de revistas/periódicos durante el entrenamiento.
         Residuos Orgánicos: Categoría desbalanceada, incluso con data augmentation, era la peor clasificada.
 
-    Plan de Mejora:
-    Evaluamos otros datasets de residuos, pero eran similares al nuestro. Decidimos descargar imágenes de internet, etiquetarlas y entrenar con este dataset mejorado.
+      💡 Plan de Mejora:
+      Evaluamos otros datasets de residuos, pero eran similares al nuestro. Decidimos descargar imágenes de internet, etiquetarlas y entrenar con          este dataset mejorado.
