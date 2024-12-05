@@ -1,4 +1,5 @@
 🗑️ Garbage Classification
+
 Día 1
 
 📌 Motivos para elegir el proyecto:
