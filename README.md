@@ -1,5 +1,6 @@
 🗑️ Garbage Classification
 Día 1
+
 📌 Motivos para elegir el proyecto:
 
     ¿Qué relevancia tiene este tema para ustedes?
