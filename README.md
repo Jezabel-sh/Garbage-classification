@@ -17,5 +17,11 @@
 - ¿Qué modelo han elegido y por qué? ```EfficientBO que está especializado en clasificar objetos y lo reentrenaremos para nuestro caso.```
 - ¿Qué dataset han seleccionado y cuál es la razón detrás de esta elección? ```Hemos elegido este dataset, ya que contiene diferentes categorias de materiales para saber como dividirlas a la hora del reciclaje, este dataset presenta imágenes con sus respectivas etiquetas lo que facilita el entrenamiento.```
 
+- Día 2
+
+# ETAPAS:
+- Configuración del entorno
+- Pruebas Iniciales con el modelo ```Realizamos una prueba inicial con el modelo sin entrenar, pero los resultados no eran buenos```
+- Análisis y congelación de capas ```
 
 
