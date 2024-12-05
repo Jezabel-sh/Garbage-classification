@@ -43,22 +43,22 @@ Día 1
 Día 2
 🔍 Nuestro Modelo:
 
-    Pruebas Iniciales:
-    Hicimos pruebas con el modelo sin entrenar, pero los resultados no fueron satisfactorios.
+     ❌ Pruebas Iniciales:
+        Hicimos pruebas con el modelo sin entrenar, pero los resultados no fueron satisfactorios.
 
-    Procesamiento de Datos:
+     🚧 Procesamiento de Datos:
         Ajustamos las imágenes a 224x224.
         Nuestro modelo tiene 238 capas. Añadimos una capa de salida para clasificar entre 6 categorías.
 
-   📈 Resultados del Entrenamiento:
+     📈 Resultados del Entrenamiento:
         Prueba 1: Últimas 80 capas sin congelar, 30 epochs. Métricas inestables por exceso de parámetros.
         Prueba 2: Últimas 120 capas sin congelar, 50 epochs. Menos inestabilidad, pero hay overfitting.
         Prueba 3: Últimas 20 capas sin congelar, 50 epochs. Peor estabilidad en las métricas.
-        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían inestables.
+        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían               inestables.
         Prueba 5: Congelamos las primeras y últimas 100 capas, 50 epochs, añadimos early stopping. ¡El modelo funcionó correctamente!
 
-    Análisis de Resultados:
-    El modelo tiene buen rendimiento con las imágenes del dataset, pero no generaliza bien con imágenes externas (por ejemplo, de Google).
+     🔎 Análisis de Resultados:
+        El modelo tiene buen rendimiento con las imágenes del dataset, pero no generaliza bien con imágenes externas (por ejemplo, de Google).
 
 Día 3
 🚀 Mejoras en el Modelo:
