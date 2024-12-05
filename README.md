@@ -57,9 +57,8 @@ Día 2
         Prueba 1: Últimas 80 capas sin congelar, 30 epochs. Métricas inestables por exceso de parámetros.
         Prueba 2: Últimas 120 capas sin congelar, 50 epochs. Menos inestabilidad, pero hay overfitting.
         Prueba 3: Últimas 20 capas sin congelar, 50 epochs. Peor estabilidad en las métricas.
-        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas seguían               
-        inestables.
-        Prueba 5: Congelamos las primeras y últimas 100 capas, 50 epochs, añadimos early stopping. ¡El modelo funcionó correctamente!
+        Prueba 4: Congelamos las primeras y últimas 50 capas, 50 epochs, añadimos callback. Mejoró el entrenamiento, pero las métricas           seguían inestables.
+        Prueba 5: Las capas iniciales (todas excepto las últimas 100) se congelan para conservar las características genéricas                   aprendidas. Las últimas 100 capas se habilitan para el entrenamiento, permitiendo que se adapten a la nueva tarea. ¡El modelo            funcionó correctamente!
 
      🔎 Análisis de Resultados:
         El modelo tiene buen rendimiento con las imágenes del dataset, pero no generaliza bien con imágenes externas (por ejemplo, de Google).
